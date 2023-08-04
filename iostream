@@ -1,0 +1,15 @@
+#include <iostream>
+ 
+int main()
+{
+ 
+	int a = 10;
+	int& b = a;
+	int& c = a;
+	int& d = b;
+	//
+	int& e;//
+	int m = 2;
+	b = m;//
+	return 0;
+}
