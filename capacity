@@ -1,0 +1,10 @@
+public class MyArrayList {
+    private Object[] array;
+    private int size;
+    private int capacity;
+
+    public MyArrayList() {
+        capacity = 10; 
+        array = new Object[capacity];
+        size = 0;
+    }
