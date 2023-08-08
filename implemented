@@ -1,0 +1,15 @@
+	 
+		System.out.println("SampleUserManagerImpl.doRemoveUser - This operation is not implemented !");  
+		return false; 
+	} 
+ 
+	protected boolean doUpdateUser(User user) throws UserProfileResourceException { 
+ 
+		System.out.println("SampleUserManagerImpl.doUpdateUser - This operation is not implemented !");  
+		return false; 
+	} 
+   
+	protected User doGetUserInstance() throws UserProfileResourceException { 
+		 
+		System.out.println("SampleUserManagerImpl.doGetUserInstance - This operation is not implemented !");  
+		return null; 
