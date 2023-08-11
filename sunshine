@@ -1,0 +1,22 @@
+ else if (msg.message == WM_MOUSEMOVE && status == 1) {
+            curX = msg.x;
+            curY = msg.y;
+        }
+        else if (msg.message == WM_LBUTTONUP && status == 1) {
+            printf("up\n");
+            if (msg.x > 260 && msg.y < 995 && msg.y > 180 && msg.y < 491) {
+                if (sunshine >= sunshineTable[curZhiWu - 1]) {
+                    sunshine -= sunshineTable[curZhiWu - 1];
+                    int col = (msg.x - 260) / 81.6;
+                    int row = (msg.y - 210) / 103.6;
+                    printf("[%d,%d]\n", row, col);
+                    if (map[row][col].type == 0) {
+                        map[row][col].type = curZhiWu;
+                        map[row][col].frameIndex = 0;
+                    }
+                }
+            }
+            status = 0;
+            curZhiWu = 0;
+        }
+    }
