@@ -1,0 +1,12 @@
+SLNode* NewNode(Datatype x)
+{
+	SLNode* newnode = (SLNode*)malloc(sizeof(Datatype));
+	if (newnode == NULL)
+	{
+		perror("malloc");
+		exit(-1);
+	}
+	newnode->data = x;
+	newnode->next = NULL;
+	return newnode;
+}
