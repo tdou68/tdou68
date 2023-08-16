@@ -1,0 +1,68 @@
+void createObstacle()
+{
+    int i;
+	for( i = 0 ;i < OBSTACLE_COUNT:i++)
+    {
+			if(obstacles[i].exist == false){
+					break;
+            }     
+    }
+    
+    if(i  >= OBSTACLE_COUNT){
+        return;
+    }
+    
+    obstacles[i].exist = true;
+    obstacles[i].imgIndex = 0;
+    obstacles[i].type =        (obstacle_type)(rand()%OBSTACLE_TYPE_COUNT);
+    
+    
+    obstacles[i].x = WIN_WIDTH;
+    obstacles[i].y = 345 +5 - obstacleImgs[obstacles[i].type][0].getheirgt();
+    
+    if(obstacles[i].type == TORTOISE)
+    {
+			obstacles[i].speed = 0;
+        	obstacles[i].power = 5;
+        		
+    }else if(obstacles[i].type == LION)
+    {
+		obstacles[i].speed = 4;
+        obstacles[i].power = 20;
+    }
+    
+}
+void createObstacle()
+{
+    int i;
+	for( i = 0 ;i < OBSTACLE_COUNT:i++)
+    {
+			if(obstacles[i].exist == false){
+					break;
+            }     
+    }
+    
+    if(i  >= OBSTACLE_COUNT){
+        return;
+    }
+    
+    obstacles[i].exist = true;
+    obstacles[i].imgIndex = 0;
+    obstacles[i].type =        (obstacle_type)(rand()%OBSTACLE_TYPE_COUNT);
+    
+    
+    obstacles[i].x = WIN_WIDTH;
+    obstacles[i].y = 345 +5 - obstacleImgs[obstacles[i].type][0].getheirgt();
+    
+    if(obstacles[i].type == TORTOISE)
+    {
+			obstacles[i].speed = 0;
+        	obstacles[i].power = 5;
+        		
+    }else if(obstacles[i].type == LION)
+    {
+		obstacles[i].speed = 4;
+        obstacles[i].power = 20;
+    }
+    
+}
