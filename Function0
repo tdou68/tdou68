@@ -1,0 +1,33 @@
+public final class Person {
+   private boolean gender;
+   @NotNull
+   private static final Lazy instance$delegate;
+   public static final Person.Companion Companion = new Person.Companion((DefaultConstructorMarker)null);
+
+   public Person() {
+      this.gender = true;
+      String var1 = "Person init 2,gender:" + this.gender;
+      boolean var2 = false;
+      System.out.println(var1);
+      var1 = "Person init 1";
+      var2 = false;
+      System.out.println(var1);
+   }
+
+   public Person(@NotNull String name, boolean gender) {
+      Intrinsics.checkParameterIsNotNull(name, "name");
+      this();
+      String var3 = "constructor";
+      boolean var4 = false;
+      System.out.println(var3);
+   }
+
+   static {
+      instance$delegate = LazyKt.lazy((Function0)null.INSTANCE);
+      String var0 = "companion init 1";
+      boolean var1 = false;
+      System.out.println(var0);
+      var0 = "companion init 2";
+      var1 = false;
+      System.out.println(var0);
+   }
